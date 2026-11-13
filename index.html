@@ -1,13 +1,235 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>sukra-app</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sukra Astrology & Planetary Portal | Divine Venus Wisdom</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Cinzel:wght@600;700;800&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            serif: ['Cinzel', 'serif']
+          },
+          colors: {
+            shukra: {
+              50: '#fbf9f4',
+              100: '#f6f2e6',
+              500: '#c5a059',
+              600: '#b08b43',
+              700: '#8c6b2e',
+              900: '#1a1815'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #0b0c10; color: #f3f4f6; }
+    .gold-gradient { background: linear-gradient(135deg, #f7d070 0%, #c5a059 50%, #947128 100%); }
+    .gold-text { background: linear-gradient(135deg, #fce8aa 0%, #c5a059 50%, #e0b865 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .glass-card { background: rgba(22, 27, 34, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(197, 160, 89, 0.2); }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-amber-500/30 selection:text-amber-200">
+  <!-- Navigation Header -->
+  <header class="border-b border-amber-500/20 bg-black/60 sticky top-0 z-50 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl gold-gradient flex items-center justify-center text-black font-serif font-black text-xl shadow-lg shadow-amber-500/20">
+          शु
+        </div>
+        <div>
+          <span class="text-xl font-bold font-serif tracking-wider gold-text block">SUKRA APP</span>
+          <span class="text-[10px] tracking-widest text-amber-300/70 uppercase">Astrological & Planetary Wisdom</span>
+        </div>
+      </div>
+      <nav class="hidden md:flex items-center gap-6 text-sm text-neutral-300">
+        <a href="#hora" class="hover:text-amber-400 transition-colors">Sukra Hora</a>
+        <a href="#mantra" class="hover:text-amber-400 transition-colors">Gayatri Mantra</a>
+        <a href="#remedies" class="hover:text-amber-400 transition-colors">Remedies</a>
+        <a href="#calculator" class="hover:text-amber-400 transition-colors">Planetary Strength</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <a href="https://github.com/JeevananthanV/sukra_app" target="_blank" rel="noopener noreferrer" class="px-4 py-2 text-xs font-semibold rounded-lg border border-amber-500/30 text-amber-300 hover:bg-amber-500/10 transition-colors flex items-center gap-2">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          GitHub
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main class="flex-1">
+    <section class="relative pt-16 pb-20 overflow-hidden">
+      <div class="absolute inset-0 opacity-20 pointer-events-none bg-[radial-gradient(#c5a059_1px,transparent_1px)] [background-size:24px_24px]"></div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div class="text-center max-w-3xl mx-auto">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-amber-500/30 bg-amber-500/10 text-amber-300 text-xs font-semibold mb-6">
+            <span>✨</span> Sacred Vedic Astrology & Astronomical Calculation
+          </div>
+          <h1 class="text-4xl sm:text-6xl font-extrabold font-serif tracking-tight leading-tight mb-6">
+            Harness the Radiance of <span class="gold-text">Lord Sukra</span>
+          </h1>
+          <p class="text-neutral-400 text-base sm:text-lg leading-relaxed mb-8">
+            Sukra (Venus) represents beauty, prosperity, artistic genius, love, and spiritual knowledge. Discover your planetary alignments, calculate real-time Shukra Hora, and chant sacred mantras.
+          </p>
+          <div class="flex flex-wrap items-center justify-center gap-4">
+            <a href="#hora" class="px-6 py-3.5 rounded-xl font-semibold text-sm text-black gold-gradient shadow-lg shadow-amber-500/25 hover:opacity-95 transition-all">
+              Calculate Shukra Hora
+            </a>
+            <a href="#mantra" class="px-6 py-3.5 rounded-xl font-semibold text-sm text-neutral-200 glass-card hover:bg-white/5 transition-all">
+              Chant Sacred Mantras
+            </a>
+          </div>
+        </div>
+
+        <!-- Metric Highlights -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mt-16">
+          <div class="glass-card p-6 rounded-2xl border border-amber-500/20 text-center">
+            <div class="text-amber-400 text-3xl font-serif font-bold mb-1">Friday</div>
+            <div class="text-xs uppercase tracking-wider text-neutral-400">Sacred Day (Velli)</div>
+          </div>
+          <div class="glass-card p-6 rounded-2xl border border-amber-500/20 text-center">
+            <div class="text-amber-400 text-3xl font-serif font-bold mb-1">Diamond / Zircon</div>
+            <div class="text-xs uppercase tracking-wider text-neutral-400">Prescribed Gemstone</div>
+          </div>
+          <div class="glass-card p-6 rounded-2xl border border-amber-500/20 text-center">
+            <div class="text-amber-400 text-3xl font-serif font-bold mb-1">South-East</div>
+            <div class="text-xs uppercase tracking-wider text-neutral-400">Vastu Direction (Agni)</div>
+          </div>
+          <div class="glass-card p-6 rounded-2xl border border-amber-500/20 text-center">
+            <div class="text-amber-400 text-3xl font-serif font-bold mb-1">White / Silk</div>
+            <div class="text-xs uppercase tracking-wider text-neutral-400">Favored Attire</div>
+          </div>
+        </div>
+
+        <!-- Interactive Calculator & Mantra Section -->
+        <div id="hora" class="mt-20 grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+          <!-- Realtime Hora Widget -->
+          <div class="glass-card p-8 rounded-3xl border border-amber-500/30">
+            <div class="flex items-center justify-between pb-6 border-b border-white/10 mb-6">
+              <div>
+                <h3 class="text-xl font-bold font-serif text-white">Shukra Hora Calculator</h3>
+                <p class="text-xs text-neutral-400">Planetary hour calculation based on sunrise</p>
+              </div>
+              <span id="liveClock" class="px-3 py-1 rounded-full text-xs font-mono bg-amber-500/20 text-amber-300 border border-amber-500/30">
+                00:00:00
+              </span>
+            </div>
+
+            <div class="space-y-4">
+              <div class="p-4 rounded-xl bg-black/40 border border-white/5 flex items-center justify-between">
+                <div>
+                  <div class="text-xs text-neutral-400">Friday Morning Hora</div>
+                  <div class="text-sm font-semibold text-amber-200">06:00 AM – 07:00 AM</div>
+                </div>
+                <span class="px-2.5 py-1 text-[11px] font-medium rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">Highly Auspicious</span>
+              </div>
+              <div class="p-4 rounded-xl bg-black/40 border border-white/5 flex items-center justify-between">
+                <div>
+                  <div class="text-xs text-neutral-400">Friday Afternoon Hora</div>
+                  <div class="text-sm font-semibold text-amber-200">01:00 PM – 02:00 PM</div>
+                </div>
+                <span class="px-2.5 py-1 text-[11px] font-medium rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">Finance & Wealth</span>
+              </div>
+              <div class="p-4 rounded-xl bg-black/40 border border-white/5 flex items-center justify-between">
+                <div>
+                  <div class="text-xs text-neutral-400">Friday Night Hora</div>
+                  <div class="text-sm font-semibold text-amber-200">08:00 PM – 09:00 PM</div>
+                </div>
+                <span class="px-2.5 py-1 text-[11px] font-medium rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/30">Arts & Devotion</span>
+              </div>
+            </div>
+
+            <div class="mt-6 pt-6 border-t border-white/10 text-xs text-neutral-400 leading-relaxed">
+              💡 <strong class="text-neutral-200">Best Activities:</strong> Gold purchase, buying luxury vehicles, marriage discussions, signing creative agreements, commencing fine arts training.
+            </div>
+          </div>
+
+          <!-- Sacred Mantra Widget -->
+          <div id="mantra" class="glass-card p-8 rounded-3xl border border-amber-500/30">
+            <h3 class="text-xl font-bold font-serif text-white mb-2">Sacred Sukra Gayatri</h3>
+            <p class="text-xs text-neutral-400 mb-6">Chant 108 times facing East on Friday morning</p>
+
+            <div class="p-6 rounded-2xl bg-gradient-to-br from-amber-500/10 via-black to-black border border-amber-500/30 mb-6 text-center">
+              <div class="text-sm font-serif text-amber-300 leading-loose mb-4">
+                ॐ भृगुपुत्राय विद्महे दिव्यदेहाय धीमहि।<br>
+                तन्नः शुक्रः प्रचोदयात्॥
+              </div>
+              <div class="text-xs text-neutral-400 italic">
+                "Om Bhriguputraya Vidmahe Divyadehaya Dhimahi, Tannah Shukrah Prachodayat"
+              </div>
+            </div>
+
+            <div class="p-4 rounded-xl bg-black/40 border border-white/5">
+              <div class="text-xs text-amber-300 font-semibold mb-1">Sukra Beeja Mantra</div>
+              <div class="text-sm font-mono text-neutral-300">
+                ॐ शुं शुक्राय नमः (Om Shum Shukraya Namaha)
+              </div>
+            </div>
+
+            <div class="mt-6 flex items-center justify-between">
+              <span class="text-xs text-neutral-400">Japa Counter:</span>
+              <div class="flex items-center gap-3">
+                <button id="mantraBtn" onclick="incrementJapa()" class="px-4 py-2 text-xs font-semibold rounded-lg gold-gradient text-black font-bold">
+                  Count: <span id="japaCount">0</span>/108
+                </button>
+                <button onclick="resetJapa()" class="px-3 py-2 text-xs text-neutral-400 hover:text-white">
+                  Reset
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 bg-black/80 py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between text-xs text-neutral-500 gap-4">
+      <div>
+        Designed & Maintained by <a href="https://github.com/JeevananthanV" class="text-amber-400 hover:underline">Jeevananthan V</a> • Part of the 24 Enterprise Web Suite
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="https://jeevananthanv-portfolio.netlify.app" class="hover:text-amber-300">Master Portfolio</a>
+        <span>•</span>
+        <a href="https://github.com/JeevananthanV/sukra_app" class="hover:text-amber-300">GitHub Repository</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function updateClock() {
+      const now = new Date();
+      const clock = document.getElementById('liveClock');
+      if (clock) {
+        clock.innerText = now.toLocaleTimeString();
+      }
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+
+    let count = 0;
+    function incrementJapa() {
+      count = (count + 1) % 109;
+      document.getElementById('japaCount').innerText = count;
+      if (count === 108) {
+        alert('🎉 108 Japa cycles completed! May Lord Sukra bless you with abundance.');
+      }
+    }
+    function resetJapa() {
+      count = 0;
+      document.getElementById('japaCount').innerText = count;
+    }
+  </script>
+</body>
 </html>
